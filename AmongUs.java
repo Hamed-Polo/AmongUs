@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.awt.*;
 
 public class AmongUs {
     public static void main(String[] args) {
@@ -29,13 +28,34 @@ public class AmongUs {
             catch (Exception e){
                 System.out.print(e.getMessage());
             }
-            String notSus = color + " was not An Imposter";
-            String sus = color + " was An Imposter";
+            String notSus = " . 　　　。　　　　•　 　ﾟ　　。 　　.\n" +
+                    "\n" +
+                    "　　　.　　　 　　.　　　　　。　　 。　. 　\n" +
+                    "\n" +
+                    ".　　 。　　　　　 ඞ 。 . 　　 • 　　　　•\n" +
+                    "\n" +
+                    "　　ﾟ     "+ color + " was not An Impostor　 。　.\n" +
+                    "\n" +
+                    "　　'　　　 1 Impostor remaining 　 　　。\n" +
+                    "\n" +
+                    "　　ﾟ　　　.　　　. ,　　　　.　 .ﾟ　　　.　　　.";
+
+            String sus = " . 　　　。　　　　•　 　ﾟ　　。 　　.\n" +
+                    "\n" +
+                    "　　　.　　　 　　.　　　　　。　　 。　. 　\n" +
+                    "\n" +
+                    ".　　 。　　　　　 ඞ 。 . 　　 • 　　　　•\n" +
+                    "\n" +
+                    "　　ﾟ      "+ color + " was An Impostor　 。　.\n" +
+                    "\n" +
+                    "　　'　　　 0 Impostors remaining 　 　　。\n" +
+                    "\n" +
+                    "　　ﾟ　　　.　　　. ,　　　　.　 .ﾟ　　　.　　　.";
             if (color.equalsIgnoreCase("red")) {
                 for (int d = 0; d < sus.length(); d++) {
                     System.out.printf("%c", sus.charAt(d));
                     try {
-                        Thread.sleep(120);
+                        Thread.sleep(50);
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
                     }
@@ -45,7 +65,7 @@ public class AmongUs {
                 for (int d = 0; d < notSus.length(); d++) {
                     System.out.printf("%c", notSus.charAt(d));
                     try {
-                        Thread.sleep(120);
+                        Thread.sleep(50);
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
                     }
